@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protected Papyrus - About</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://i.postimg.cc/cZbN8vNK/DALL-E-2023-11-25-16-07-55.png') center no-repeat;
+            background-attachment: fixed;
+            color: #fff;
+            position: relative;
+            overflow-x: hidden;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .overlay {
+            position: relative;
+            z-index: 1;
+            background: linear-gradient(rgba(52, 73, 94, 0.7), rgba(52, 73, 94, 0.3));
+            padding: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            color: #3498db;
+        }
+
+        #about,
+        #features,
+        #contact {
+            margin-bottom: 50px;
+        }
+
+        ul {
+            padding-left: 20px;
+            list-style: none;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+        .circle-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .circle {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #e03daf; /* Updated color */
+            margin: 20px;
+            box-shadow: 0 0 20px rgba(237, 147, 210, 0.7);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+            .circle:hover {
+                transform: scale(1.2);
+                box-shadow: 0 0 40px rgba(52, 152, 219, 0.9);
+            }
+
+        .feature-circle {
+            background-color: #ffcb59;
+            box-shadow: 0 0 20px rgba(217, 252, 207, 0.7);
+        }
+
+        .key-points {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #e03daf;
+            font-size: 16px;
+            line-height: 1.4;
+            z-index: 2;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .feature-details {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .hidden-section {
+            display: none;
+        }
+
+        .AES-details,
+        .SecureConnection-details,
+        .SecuredNoteSharing-details {
+            display: none;
+        }
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            body {
+                background: url('https://i.postimg.cc/cZbN8vNK/DALL-E-2023-11-25-16-07-55.png') center no-repeat;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <h1 style="font-size: 36px; color: #53E3D4;">Protected Papyrus</h1>
+        <p style="font-size: 18px; color: #53E3D4;">Welcome to the official website for Protected Papyrus. Here, you can find information about our secure note-taking application and its features.</p>
+
+        <div id="about">
+            <h2 style="color: #e74c3c;">About Protected Papyrus</h2>
+            <p style="font-size: 16px;color: #53E3D4;">Protected Papyrus is a cutting-edge secure note-taking application designed to safeguard your personal and sensitive information.</p>
+            <p style="font-size: 16px;color: #53E3D4;">Our mission is to provide a secure and user-friendly platform for creating and managing notes, ensuring that your data remains confidential and protected.</p>
+            <p style="font-size: 16px;color: #53E3D4;">Key Highlights:</p>
+            <ul>
+                <li style="font-size: 16px; color: #2ecc71;"><strong>End-to-End Encryption:</strong> Your notes are encrypted using the latest AES encryption algorithms, providing a robust layer of security.</li>
+                <li style="font-size: 16px; color: #2ecc71;"><strong>User Privacy:</strong> Each user has a unique identifier, ensuring personalized and private access to their notes.</li>
+                <li style="font-size: 16px; color: #2ecc71;"><strong>Scheduled Note Sending:</strong> Schedule notes to be sent to other users, making communication seamless and timely.</li>
+            </ul>
+        </div>
+
+        <div id="features">
+            <h2 style="color: #53E3D4;">Key Features</h2>
+            <div class="circle-container">
+                <div class="circle feature-circle" onclick="showFeatureDetails('AES', event)">
+                    <div class="key-points">
+                        <p style="color: #f01633 ">AES Encryption</p>
+                    </div>
+                </div>
+                <div class="circle feature-circle" onclick="showFeatureDetails('SecureConnection', event)">
+                    <div class="key-points">
+                        <p style="color: #f01633 ">Secure Connection</p>
+                    </div>
+                </div>
+                <div class="circle feature-circle" onclick="showFeatureDetails('SecuredNoteSharing', event)">
+                    <div class="key-points">
+                        <p style="color: #f01633 ">Secured-Note Sharing</p>
+                    </div>
+                </div>
+            </div>
+            <div id="AES-details" class="hidden-section AES-details feature-details">
+                <h3>AES Encryption Details</h3>
+                <p>AES (Advanced Encryption Standard) encryption is a fundamental component of the security infrastructure in Protected Papyrus. Here's how AES encryption is implemented in our application:</p>
+                <ul>
+                    <li style="color: #3503D1;"><strong style="color: magenta">Unique Encryption Key and Initialization Vector (IV):</strong> For each user note, a unique Encryption Key and Initialization Vector (IV) are generated. These are securely stored in the database.</li>
+                    <li style="color: #3503D1;"><strong style="color: magenta">Encryption Process:</strong> When creating or updating a note, the application uses the unique Encryption Key and IV associated with that note. The note's content is encrypted using the AES algorithm in Cipher Block Chaining (CBC) mode.</li>
+                    <li style="color: #3503D1;"><strong style="color: magenta">Secure Storage:</strong> The encrypted content is securely stored in the database. The Encryption Keys are stored securely, ensuring that only authorized users with the correct keys can decrypt and access the note content.</li>
+                    <li style="color: #3503D1;"><strong style="color: magenta">Enhanced Security:</strong> AES is a widely recognized and secure encryption algorithm. Using unique Encryption Keys and IVs for each note enhances security, preventing one compromised key from affecting other notes.</li>
+                </ul>
+                <p>The implementation of AES encryption in Protected Papyrus ensures a robust layer of security for user notes, making it challenging for unauthorized entities to access sensitive information.</p>
+            </div>
+
+            <div id="SecureConnection-details" class="hidden-section SecureConnection-details feature-details">
+                <h3>Secure Connection Details</h3>
+                <p>Protected Papyrus prioritizes the establishment of a secure and reliable connection to ensure the confidentiality and integrity of user data. The implementation of a robust secure connection is crucial for safeguarding sensitive information within the application. The following key measures are employed to fortify the connection:</p>
+                <ul>
+                    <li style="color: #3503D1;"><strong style="color: magenta">Network Connectivity Assurance:</strong> Protected Papyrus operates with a stringent network connectivity policy, allowing access only through a secure internet connection.</li>
+                    <li style="color: #3503D1;"><strong style="color: magenta">Real-time Internet Check:</strong> The application performs periodic checks, verifying internet connectivity every 10 seconds.</li>
+                    <li style="color: #3503D1;"><strong style="color: magenta">Hash and Salt Algorithm for Login Security:</strong> User login credentials are fortified using a robust hash and salt algorithm.</li>
+                    <li style="color: #3503D1;"><strong style="color: magenta">User Data Privacy:</strong> Each user is assigned a unique identifier, ensuring a personalized and private user experience.</li>
+                    <li style="color: #3503D1;"><strong style="color: magenta">Scheduled Notes and Encryption:</strong> Users can schedule notes for future delivery to other users, enhancing communication flexibility. The application employs AES encryption for note content, ensuring end-to-end security during storage and transmission.</li>
+                </ul>
+                <p>Secure connections in Protected Papyrus are foundational to our commitment to user privacy and data protection. By integrating advanced encryption, user authentication, and network security measures, we strive to create a trustworthy platform for secure note-taking.</p>
+            </div>
+            <div id="SecuredNoteSharing-details" class="hidden-section SecuredNoteSharing-details feature-details">
+                <h3>Secured-Note Sharing Details</h3>
+                <p>Secured-Note Sharing in Protected Papyrus is designed to offer users a seamless and secure way to share notes with enhanced privacy. The feature encompasses the following key elements:</p>
+                <ul>
+                    <li style="color: #3503D1;"><strong style="color: magenta">Secure Encryption:</strong> Each shared note undergoes encryption using a unique key, ensuring the confidentiality of the shared content.</li>
+                    <li style="color: #3503D1;"><strong style="color: magenta">Secure Storage:</strong> Encrypted notes and their corresponding keys are securely stored in our database, employing industry-standard security measures to safeguard user data.</li>
+                    <li style="color: #3503D1;"><strong style="color: magenta">User Verification:</strong> Before granting access to a shared note, the application verifies the identity of the recipient, ensuring secure sharing only with authorized users.</li>
+                    <li style="color: #3503D1;"><strong style="color: magenta">Create Secure Notes:</strong> Users can create secure notes within the application by selecting the "Create New Note" option. During the creation process, they can choose to enable secure sharing, adding an extra layer of security to the note.</li>
+                    <li style="color: #3503D1;"><strong style="color: magenta">Sharing Process:</strong> To share a secure note, users navigate to the note they want to share and select the "Share" option. They then enter the recipient's information, such as their email address or username. The application verifies the recipient's identity before granting access to the shared note.</li>
+                    <li style="color: #3503D1;"><strong style="color: magenta">View and Edit Privileges:</strong> Recipients can view the shared note content in a secure environment. Depending on the sender's permissions, recipients may also have the option to edit the note, ensuring collaborative capabilities while prioritizing security and privacy.</li>
+                </ul>
+                <p>Secured-Note Sharing in Protected Papyrus adds an extra layer of security to collaborative note-taking. By combining secure encryption, user verification, and controlled access, we strive to provide a reliable and private sharing experience for our users.</p>
+            </div>
+        </div>
+
+        <div id="contact">
+            <h2 style="color: #53E3D4;">Contact Us</h2>
+            <p style="color: #53E3D4;">If you have any questions or feedback, feel free to reach out to us:</p>
+            <p style="color: #53E3D4;"><strong>Email:</strong> <a href="mailto:info@protectedpapyrus.com" style="color: #aed0e8;">info@protectedpapyrus.com</a></p>
+            <p style="color: #53E3D4;"><strong>Phone:</strong> <a href="tel:+1234567890" style="color: #aed0e8;">+1 (234) 567-890</a></p>
+        </div>
+    </div>
+
+    <script>
+        function showFeatureDetails(feature, clickEvent) {
+            // Hide all feature details
+            document.querySelectorAll('.feature-details').forEach(function (element) {
+                element.style.display = 'none';
+            });
+
+            // Show the selected feature details
+            document.getElementById(feature + '-details').style.display = 'block';
+
+            // Scroll to the selected feature details
+            document.getElementById(feature + '-details').scrollIntoView({
+                behavior: 'smooth'
+            });
+
+            // Prevent the click event from propagating to the container
+            if (clickEvent) {
+                clickEvent.stopPropagation();
+            }
+        }
+
+        function hideFeatureDetails() {
+            // Hide all feature details when clicking outside the circles
+            document.querySelectorAll('.feature-details').forEach(function (element) {
+                element.style.display = 'none';
+            });
+        }
+
+        // Add a click event listener to the document to hide feature details
+        document.addEventListener('click', hideFeatureDetails);
+    </script>
+</body>
+
+</html>
