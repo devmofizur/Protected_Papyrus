@@ -43,23 +43,27 @@
             this.button5 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.pnlChoice.SuspendLayout();
             this.panel15.SuspendLayout();
             this.sidebar.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(35)))), ((int)(((byte)(71)))));
+            this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.pnlChoice);
             this.panel1.Controls.Add(this.panel15);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(5, 5);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.panel1.Size = new System.Drawing.Size(1236, 40);
+            this.panel1.Size = new System.Drawing.Size(1250, 40);
             this.panel1.TabIndex = 2;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
@@ -93,7 +97,7 @@
             this.panel15.Controls.Add(this.button4);
             this.panel15.Controls.Add(this.button3);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel15.Location = new System.Drawing.Point(1140, 5);
+            this.panel15.Location = new System.Drawing.Point(1154, 5);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(91, 30);
             this.panel15.TabIndex = 3;
@@ -140,13 +144,14 @@
             // sidebar
             // 
             this.sidebar.BackColor = System.Drawing.Color.Black;
+            this.sidebar.Controls.Add(this.panel2);
             this.sidebar.Controls.Add(this.button2);
             this.sidebar.Controls.Add(this.panel4);
             this.sidebar.Controls.Add(this.panel3);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(5, 45);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(50, 635);
+            this.sidebar.Size = new System.Drawing.Size(250, 600);
             this.sidebar.TabIndex = 3;
             // 
             // button2
@@ -197,12 +202,44 @@
             this.sidebarTransition.Interval = 10;
             this.sidebarTransition.Tick += new System.EventHandler(this.sidebarTransition_Tick);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.button6);
+            this.panel2.Location = new System.Drawing.Point(5, 262);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(239, 55);
+            this.panel2.TabIndex = 5;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(0, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(239, 52);
+            this.button6.TabIndex = 0;
+            this.button6.Text = "Event";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(255, 45);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1000, 600);
+            this.panel5.TabIndex = 4;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1246, 685);
+            this.BackColor = System.Drawing.Color.Cyan;
+            this.ClientSize = new System.Drawing.Size(1260, 650);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -214,6 +251,7 @@
             this.panel15.ResumeLayout(false);
             this.sidebar.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -233,5 +271,8 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Timer sidebarTransition;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Panel panel5;
     }
 }
